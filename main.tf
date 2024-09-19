@@ -1,15 +1,24 @@
 # ====== Provider Configuration ======
 provider "local" {
-  # The Local provider allows Terraform to manage local resources such as files and directories.
+  # NOTE: The Local provider allows Terraform to manage local resources such as files and directories.
   # No additional configuration is required for basic usage.
 }
 
 # ====== Resources ======
 
 # Resource: Create a local file named hello.txt
+# comment : this is test comment
 resource "local_file" "hello" {
-   content  = "Your custom message here!"
+  # The content to be written into the file.
+  content  = "Hello, Terraform!"
 
-  # The path where the file will be created.
+  # TODO: Parameterize the filename for flexibility.
+  # WARNING: Ensure the path is correct to prevent file creation in unintended locations.
   filename = "${path.module}/hello.txt"
+}
+#Resource : this is test comment 
+# Resource: [Resource Name]
+resource "[PROVIDER]_[RESOURCE_TYPE]" "[RESOURCE_NAME]" {
+  # [Attribute]: [Description]
+  attribute = "value"
 }
