@@ -15,8 +15,7 @@ jobs:
        
       - name: Install terraform-docs
         run: |
-          echo  i am here whoami
-          whoami
+          
           wget https://github.com/terraform-docs/terraform-docs/releases/download/v0.15.0/terraform-docs-v0.15.0-linux-amd64.tar.gz
           tar -xzf terraform-docs-v0.15.0-linux-amd64.tar.gz
           sudo mv terraform-docs /usr/local/bin/
@@ -26,7 +25,7 @@ jobs:
 
       - name: Commit Documentation
         run: |
-          echo whoami
+          git config user.name
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add DOCUMENTATION.md
