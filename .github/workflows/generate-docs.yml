@@ -15,7 +15,8 @@ jobs:
        
       - name: Install terraform-docs
         run: |
-          echo i am here1
+          echo  i am here whoami
+          whoami
           wget https://github.com/terraform-docs/terraform-docs/releases/download/v0.15.0/terraform-docs-v0.15.0-linux-amd64.tar.gz
           tar -xzf terraform-docs-v0.15.0-linux-amd64.tar.gz
           sudo mv terraform-docs /usr/local/bin/
