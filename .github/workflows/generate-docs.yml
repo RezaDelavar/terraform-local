@@ -25,7 +25,8 @@ jobs:
 
       - name: Commit Documentation
         run: |
-          
+          git config user.name "RezaDelavar"
+          git config user.email "155983047+RezaDelavar@users.noreply.github.com"
           git add DOCUMENTATION.md
           git commit -m "docs: update generated documentation [skip ci]" || echo "No changes to commit"
 
